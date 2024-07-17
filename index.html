@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User & Book Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User & Book Management System</h1>
+        
+        <!-- User creation form -->
+        <div class="form-container">
+            <h2>Create New User</h2>
+            <form id="createUserForm">
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="userSurname">Surname:</label>
+                    <input type="text" id="userSurname" name="surname" required>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="userSubscriptionType">Subscription Type:</label>
+                    <select id="userSubscriptionType" name="subscriptionType" required>
+                        <option value="Basic">Basic</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="userSubscriptionDate">Subscription Date:</label>
+                    <input type="date" id="userSubscriptionDate" name="subscriptionDate" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Create User</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Book creation form -->
+        <div class="form-container">
+            <h2>Add New Book</h2>
+            <form id="addBookForm">
+                <div class="form-group">
+                    <label for="bookId">ID:</label>
+                    <input type="text" id="bookId" name="id" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookName">Name:</label>
+                    <input type="text" id="bookName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookGenre">Genre:</label>
+                    <input type="text" id="bookGenre" name="genre" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookPrice">Price:</label>
+                    <input type="number" id="bookPrice" name="price" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookPublisher">Publisher:</label>
+                    <input type="text" id="bookPublisher" name="publisher" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookAuthor">Author:</label>
+                    <input type="text" id="bookAuthor" name="author" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add Book</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Display area for user and book information -->
+        <div class="data-display">
+            <div class="user-list">
+                <h2>User List</h2>
+                <ul id="userList">
+                    <!-- User items will be dynamically added here -->
+                </ul>
+            </div>
+
+            <div class="book-list">
+                <h2>Book List</h2>
+                <ul id="bookList">
+                    <!-- Book items will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
